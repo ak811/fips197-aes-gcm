@@ -1,2 +1,6 @@
-# Project exclude paths
-/out/
+target/
+.idea/
+*.iml
+.vscode/
+.DS_Store
+*.aesf
