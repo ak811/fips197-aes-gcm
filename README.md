@@ -1,4 +1,4 @@
-# aesf
+## FIPS-197 AES + SP 800-38D GCM from scratch in Java; streaming AES-256-GCM file CLI with PBKDF2/HKDF
 
 Authenticated file encryption (AES-256-GCM) with a from-scratch AES and GCM implementation that is verified byte-for-byte against the official test vectors and the JDK.
 
@@ -179,9 +179,7 @@ try (KeySource key = KeySource.rawKey(keyBytes);
 
 CI runs the suite on Java 17 and 21, then runs `selftest` on the packaged jar.
 
-## Why ECB is broken: `ecb-demo`
-
-The first version of this project used AES in ECB mode. ECB encrypts identical 16-byte blocks to identical ciphertext, so patterns in the data survive encryption:
+## `ecb-demo`
 
 ```bash
 aesf ecb-demo                 # uses a generated sample image
